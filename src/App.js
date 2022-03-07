@@ -1,6 +1,5 @@
 import React from "react";
 import "./App.css";
-import Counter from "./components/ex-state/Counter";
 
 class App extends React.Component {
   constructor(props) {
@@ -8,21 +7,17 @@ class App extends React.Component {
     this.state = {
       isCounterVisible: true,
     };
+    this.inputRef = React.createRef();
+  }
+
+  componentDidMount() {
+    this.inputRef.current.focus();
   }
 
   render() {
     return (
       <div>
-        {this.state.isCounterVisible === true ? <Counter /> : null}
-        <button
-          onClick={() =>
-            this.setState((oldState) => ({
-              isCounterVisible: !oldState.isCounterVisible,
-            }))
-          }
-        >
-          Toggle
-        </button>
+        <input ref={this.inputRef} style={{ padding: 20 }} />
       </div>
     );
   }

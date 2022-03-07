@@ -15,3 +15,9 @@ code {
 #root {
   padding: 20px;
 }
+
+table, th, td {
+  border: 1px solid;
+  border-collapse: collapse;
+  padding: 20px;
+}
