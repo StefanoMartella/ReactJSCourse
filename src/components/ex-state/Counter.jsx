@@ -36,10 +36,10 @@ class Counter extends React.Component {
     return (
       <div>
         <h1>{counter}</h1>
-        <button onClick={this.increase}>Incrementa</button>
+        {/* <button onClick={this.increase}>Incrementa</button>
         <button disabled={this.state.counter === 0} onClick={this.decrease}>
           Decrementa
-        </button>
+        </button> */}
       </div>
     );
   }
