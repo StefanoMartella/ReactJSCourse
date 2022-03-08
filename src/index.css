@@ -21,3 +21,10 @@ table, th, td {
   border-collapse: collapse;
   padding: 20px;
 }
+
+html,
+body,
+#root,
+.App {
+  min-height: 100vh;
+}

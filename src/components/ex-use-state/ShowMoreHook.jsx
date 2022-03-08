@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 function processText(text, maxLength = 30, isShowingMore) {
   if (text.length <= maxLength) {
