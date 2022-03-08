@@ -39,6 +39,9 @@ class Timer extends React.Component {
     return (
       <>
         <h1>{this.state.timer}</h1>
+        <button onClick={() => this.startTimer()}>Avvia</button>
+        <button onClick={() => this.stopTimer()}>Stop</button>
+        <button onClick={() => this.resetTimer()}>Reset</button>
       </>
     );
   }

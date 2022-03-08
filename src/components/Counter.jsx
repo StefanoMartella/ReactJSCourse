@@ -1,26 +1,18 @@
-import { useState } from "react";
+import { useState, forwardRef, useEffect } from "react";
 
 function Counter(props) {
-  const [counter, setCounter] = useState(0);
-  // const [counter2, setCounter2] = useState(0);
+  const [time, setTime] = useState(new Date());
+
+  useEffect(() => {
+    // Impostazione interval
+    return () => {
+      // Cancellazione interval
+    };
+  }, []);
 
   return (
     <div>
-      <h1>Counter 1: {counter}</h1>
-      <button onClick={() => setCounter((oldCounter) => oldCounter + 1)}>
-        Incrementa
-      </button>
-      <button onClick={() => setCounter((oldCounter) => oldCounter - 1)}>
-        Decrementa
-      </button>
-
-      {/* <h1>Counter 2: {counter2}</h1>
-      <button onClick={() => setCounter2((oldCounter) => oldCounter + 1)}>
-        Incrementa
-      </button>
-      <button onClick={() => setCounter2((oldCounter) => oldCounter - 1)}>
-        Decrementa
-      </button> */}
+      <h1>{time.toTimeString().split(" ")[0]}</h1>
     </div>
   );
 }

@@ -16,7 +16,9 @@ class App extends React.Component {
           Avvia
         </button>
         <button onClick={() => this.timerRef.current.stopTimer()}>Stop</button>
-        <button onClick={() => this.timerRef.current.reset()}>Reset</button>
+        <button onClick={() => this.timerRef.current.resetTimer()}>
+          Reset
+        </button>
       </div>
     );
   }
