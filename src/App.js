@@ -1,12 +1,12 @@
 import React from "react";
 import "./App.css";
-import UserHook from "./components/UserHook";
+import FormHookForm from "./components/FormHookForm";
 
 class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <UserHook />
+        <FormHookForm />
       </div>
     );
   }
