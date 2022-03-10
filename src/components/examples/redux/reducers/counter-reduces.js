@@ -1,11 +1,11 @@
 import {
   INCREASE_COUNTER,
   DECREASE_COUNTER,
-} from "./../action-types/counter-action-types";
+} from "../action-types/counter-action-types";
 
 const initialState = {
   counter: 0,
-  anotherValue: "value",
+  key: "value",
 };
 
 const counterReducer = (state = initialState, action) => {
