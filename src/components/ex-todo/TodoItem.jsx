@@ -12,16 +12,18 @@ function TodoItem({ item, setTodos }) {
         {item.description}
         <div className="mt-4 d-flex flex-row flex-row-reverse">
           <Button
-            variant="danger"
             onClick={() =>
               setTodos((oldTodos) =>
-                oldTodos.filter((todo) => todo.id !== item.id)
+                oldTodos.filter(({ id }) => id !== item.id)
               )
             }
+            variant="danger"
+            type="submit"
           >
             Cancella
           </Button>
           <Button
+            type="submit"
             className="me-2"
             onClick={() =>
               setTodos((oldTodos) =>
@@ -30,8 +32,9 @@ function TodoItem({ item, setTodos }) {
                 )
               )
             }
+            variant={item.done ? "warning" : "success"}
           >
-            {item.done ? "Segna come non fatto" : "Segna come fatto"}
+            {item.done ? "Non fatto :|" : "Fatto :D"}
           </Button>
         </div>
       </Accordion.Body>

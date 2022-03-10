@@ -1,16 +1,17 @@
 import React from "react";
+import { Provider } from "react-redux";
 import "./App.css";
-import CounterProvider from "./components/examples/context/CounterContext";
-import InnerChild1 from "./components/examples/context/InnerChild1";
-import InnerChildFunctional from "./components/examples/context/InnerChildFunctional";
+import Child1 from "./components/Child1";
+import configureStore from "./components/redux/configureStore";
+
+const store = configureStore();
 
 class App extends React.Component {
   render() {
     return (
-      <CounterProvider>
-        <InnerChild1 />
-        <InnerChildFunctional />
-      </CounterProvider>
+      <Provider store={store}>
+        <Child1 />
+      </Provider>
     );
   }
 }
