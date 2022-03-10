@@ -1,10 +1,17 @@
 import React from "react";
 import "./App.css";
-import Todo from "./components/ex-todo/Todo";
+import CounterProvider from "./components/examples/context/CounterContext";
+import InnerChild1 from "./components/examples/context/InnerChild1";
+import InnerChildFunctional from "./components/examples/context/InnerChildFunctional";
 
 class App extends React.Component {
   render() {
-    return <Todo />;
+    return (
+      <CounterProvider>
+        <InnerChild1 />
+        <InnerChildFunctional />
+      </CounterProvider>
+    );
   }
 }
 
